@@ -14,7 +14,7 @@ import net.uku3lig.tiertagger.TierCache;
 import net.uku3lig.tiertagger.TierTagger;
 import net.uku3lig.tiertagger.model.GameMode;
 import net.uku3lig.tiertagger.model.PlayerInfo;
-import net.uku3lig.ukulib.fabric.PlayerArgumentType;
+import net.uku3lig.ukulib.utils.PlayerArgumentType;
 
 import java.util.Map;
 import java.util.Optional;

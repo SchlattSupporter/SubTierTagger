@@ -34,12 +34,12 @@ public class MixinTitleScreen extends Screen {
         Version latestVersion = TierTagger.getLatestVersion();
 
         if (TierTagger.isObsolete()) {
-            Minecraft.getInstance().setScreen(new ConfirmScreen(
+            Minecraft.getInstance().gui.setScreen(new ConfirmScreen(
                     b -> {
                         if (b) {
                             Minecraft.getInstance().stop();
                         } else {
-                            Minecraft.getInstance().setScreen(this);
+                            Minecraft.getInstance().gui.setScreen(this);
                         }
                     },
                     Component.translatable("tiertagger.obsolete.title"),
@@ -50,14 +50,14 @@ public class MixinTitleScreen extends Screen {
         } else if (currentVersion != null && latestVersion != null && latestVersion.isHigherThan(currentVersion)) {
             Component newVersion = Component.literal(latestVersion.toString()).withStyle(ChatFormatting.GREEN);
 
-            Minecraft.getInstance().setScreen(new ConfirmScreen(
+            Minecraft.getInstance().gui.setScreen(new ConfirmScreen(
                     b -> {
                         if (b) {
                             String url = "https://modrinth.com/mod/tiertagger/version/" + latestVersion;
                             Util.getPlatform().openUri(url);
                         }
 
-                        Minecraft.getInstance().setScreen(this);
+                        Minecraft.getInstance().gui.setScreen(this);
                     },
                     Component.translatable("tiertagger.outdated.title"),
                     Component.translatable("tiertagger.outdated.desc", newVersion),

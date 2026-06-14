@@ -32,7 +32,7 @@ public class PlayerInfoScreen extends CloseableScreen {
 
     @Override
     protected void init() {
-        this.addRenderableWidget(Button.builder(CommonComponents.GUI_DONE, _ -> Minecraft.getInstance().setScreen(parent))
+        this.addRenderableWidget(Button.builder(CommonComponents.GUI_DONE, _ -> Minecraft.getInstance().gui.setScreen(parent))
                 .bounds(this.width / 2 - 100, this.height - 27, 200, 20)
                 .build());
 
