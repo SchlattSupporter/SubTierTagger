@@ -18,12 +18,12 @@ import java.util.Optional;
 @AllArgsConstructor
 public class TierTaggerConfig implements Serializable {
     private boolean enabled = true;
-    private String gameMode = "vanilla";
+    private String gameMode = "minecart";
     private boolean showRetired = true;
     private HighestMode highestMode = HighestMode.NOT_FOUND;
     private boolean showIcons = true;
     private boolean playerList = true;
-    private int retiredColor = 0xa2d6ff;
+    private int retiredColor = 0x87B4F5;
     // note: this is a GSON internal class. this *might* break in the future
     private LinkedTreeMap<String, Integer> tierColors = defaultColors();
 
@@ -48,12 +48,12 @@ public class TierTaggerConfig implements Serializable {
 
     private static LinkedTreeMap<String, Integer> defaultColors() {
         LinkedTreeMap<String, Integer> colors = new LinkedTreeMap<>();
-        colors.put("HT1", 0xe8ba3a);
-        colors.put("LT1", 0xd5b355);
-        colors.put("HT2", 0xc4d3e7);
-        colors.put("LT2", 0xa0a7b2);
-        colors.put("HT3", 0xf89f5a);
-        colors.put("LT3", 0xc67b42);
+        colors.put("HT1", 0xFCBA28);
+        colors.put("LT1", 0xFFD878);
+        colors.put("HT2", 0x808080);
+        colors.put("LT2", 0xB5B5B5);
+        colors.put("HT3", 0xF0722E);
+        colors.put("LT3", 0xC74F0C);
         colors.put("HT4", 0x81749a);
         colors.put("LT4", 0x655b79);
         colors.put("HT5", 0x8f82a8);
