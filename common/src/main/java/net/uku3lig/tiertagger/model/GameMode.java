@@ -55,7 +55,7 @@ public record GameMode(String id, String title) {
             case "dia_smp" -> Pair.of('\uE806', TextColor.fromRgb(0x8c668b));
             case "elytra" -> Pair.of('\uE807', TextColor.fromRgb(0x8d8db1));
             case "manhunt" -> Pair.of('\uE808', TextColor.fromLegacyFormat(ChatFormatting.RED));
-            case "minecart" -> Pair.of('\uE809', TextColor.fromLegacyFormat(ChatFormatting.GRAY));
+            case "minecart" -> Pair.of('☄', TextColor.fromLegacyFormat(ChatFormatting.RED));
             case "og_vanilla" -> Pair.of('\uE810', TextColor.fromLegacyFormat(ChatFormatting.GOLD));
             case "speed" -> Pair.of('\uE811', TextColor.fromRgb(0x43a9d1));
             case "trident" -> Pair.of('\uE812', TextColor.fromRgb(0x579b8c));
